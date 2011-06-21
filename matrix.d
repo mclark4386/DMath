@@ -4,9 +4,9 @@ private{
 	import std.math,std.stdio,std.array,std.math;
 }
 
-version assimp = false
+//version = Use_Assimp
 
-version(assimp)
+version(Use_Assimp)
 {
 	private
 	{
@@ -55,7 +55,7 @@ class Mat4
 			matrix = other.matrix;
 		}
 	
-	version(assimp)
+	version(Use_Assimp)
 	{
 		public void loadFromAIMatrix4x4(aiMatrix4x4* mat)
 		{
@@ -146,7 +146,7 @@ class Mat4
 		       matrix[15] = 1;
 		}
 	
-	version(assimp)
+	version(Use_Assimp)
 	{
 		public Mat4 createFromAIMatrix4x4(aiMatrix4x4* mat)
 			{
