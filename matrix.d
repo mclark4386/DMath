@@ -15,7 +15,7 @@ version(assimp)
 }
 
 public{
-	import DPlay.Vec;
+	import DMath.Vec;
 }
 
 alias gl_float float //GLfloat
